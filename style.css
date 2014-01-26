@@ -1,14 +1,36 @@
+@font-face { font-family: 'Lato'; src: url('fonts/Lato/Lato-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Lato'; src: url('fonts/Lato/Lato-Bold.ttf') format('truetype'); font-weight: bold; }
+@font-face { font-family: 'Lato'; src: url('fonts/Lato/Lato-Italic.ttf') format('truetype'); font-style: italic; }
+
 body {
-	background-color: #CCC;
+	background-color: #EEE;
+	font-family: 'Lato',Arial;
 }
+
+img { display: block; }
+
+button { border: 0; background: #aaa; font-size: 16px; text-transform: uppercase; padding: 8px 12px; cursor: pointer; color: white; transition: 0.75s; }
+button:hover { background: #7ab90e; } 
 
 a {
 	color: gray;
 	text-decoration: none;
 }
 
+li { list-style: none; }
+
+i {
+	font-family: FontAwesome;
+	font-style: normal;
+	margin: 0 6px;
+}
+
 .bold {
 	font-weight: 700;
+}
+
+.green-color {
+	color: #8ab92e;
 }
 
 .gray {
@@ -30,9 +52,12 @@ a {
 	position: absolute;
 }
 
+.inline-left { display: inline-block; }
+.inline-right { display: inline-block; }
+
 .body-wrapper {
 	min-width: 800px;
-	max-width: 90%;
+	max-width: 1280px;
 	background-color: #FFF;
 	margin: 0 auto;
 	box-shadow: 0 0 20px #aaa;
@@ -54,7 +79,7 @@ a {
 }
 
 .links a:hover {
-	color: #7ab90e;
+	color: #8ab92e;
 }
 
 .links a:first-child {
@@ -65,8 +90,8 @@ a {
 	text-transform: uppercase;
 	position: relative;
 	height: 60px;
-	font-family: 'Duru Sans', sans-serif;
-	background: linear-gradient(#fff, #eee);
+	font-family: 'Lato', sans-serif;
+	background: #fff;
 }
 
 .banner .msg {
@@ -80,17 +105,17 @@ a {
 
 nav {
 	padding: 0 10px;
-	background-color: #7ab90e;
+	background-color: #8ab92e;
 	color: white;
 }
 
 nav a {
-	font-family: 'Duru Sans', sans-serif;
 	font-size: 14px;
 	color: white;
 	display: inline-block;
 	padding: 10px 10px;
 	margin: 0 5px;
+	transition: 0.5s;
 }
 
 nav a:hover {
@@ -104,16 +129,15 @@ nav a:hover {
 
 .tag-line {
 	font-size: 72px;
-	font-family: 'Ubuntu', sans-serif;
 	padding: 14px 30px;
-	background: linear-gradient(#eee, #fff);
+	background: #fff linear-gradient(#eee, #fff);
 	margin-bottom: 20px;
 }
 
 .content>section {
 	min-width: 400px;
 	margin: 0 20px;
-	max-width: 800px;
+	max-width: 630px;
 	display: inline-block;
 }
 
@@ -123,37 +147,57 @@ nav a:hover {
 }
 
 .content>section>header {
-	font-family: 'Ubuntu';
-	background: #7ab90e;
+	background: #8ab92e;
 	padding: 8px 16px;
 	font-size: 42px;
 	color: white;
-	background: #7ab90e;
 	border-radius: 10px 10px 0 0;
 }
 
+.content>section.data-intro {
+	font-size: 16px;
+	font-style: italic;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 8px 16px;
+	max-width: 100%;
+	min-width: 800px;
+	margin: 20px 0;
+	display: block;
+	background-color: #eee;
+}
+
+.content>section>header .subheader {
+	font-size: 22px;
+	text-transform: uppercase;
+}
+
 .content>section .summary {
-	font-family: 'Ubuntu';
 	font-size: 22px; 
-	padding: 10px 18px; 
+	padding: 6px 18px; 
 	background: #f3f3f3;
 	border: 1px solid #eee;
 	color: black;
 }
 
 .content>section .description {
-	font-family: 'Ubuntu';
-	padding: 10px 18px;
+	padding: 12px 18px 6px;
 	background: white;
 	border: 1px solid #eee;
 	border-top: 0;
+	border-bottom: 0;
 	color: #555;
 }
 
 .content>section .notes {
-	font-family: 'Ubuntu';
-	padding: 10px 18px;	
+	padding: 12px 18px 18px;	
 	border: 1px solid #eee;
 	border-top: 0;
 	font-size: 14px;
 }
+
+.include { position: relative; }
+.include>div { padding: 0 12px 10px; }
+.include ul { padding: 0; }
+
+button.qthp { margin: 25px auto; display: block }
