@@ -9,13 +9,17 @@ body {
 
 img { display: block; }
 
-button { border: 0; background: #aaa; font-size: 16px; text-transform: uppercase; padding: 8px 12px; cursor: pointer; color: white; transition: 0.75s; }
-button:hover { background: #7ab90e; } 
-
 a {
 	color: gray;
 	text-decoration: none;
 }
+
+a.button { margin: 20px auto 0; width: 230px; color: white; text-align: center; display: block; background: #8ab92e linear-gradient(#8ab92e, #361); border: 1px solid black; font-size: 16px; text-transform: uppercase; padding: 8px 12px; cursor: pointer; transition: 0.75s; }
+a.button:hover, a.button.qore:hover, a.button.prime:hover, a.button.metaboliq:hover { color: black;  background: white; } 
+
+a.button.qore { background: #555 linear-gradient(#555, #000) }
+a.button.prime { background: #EA394D linear-gradient(#EA394D, #9A0000) }
+a.button.metaboliq { background: #59D linear-gradient(#59D, #059); }
 
 li { list-style: none; }
 
@@ -56,17 +60,16 @@ i {
 .inline-right { display: inline-block; }
 
 .body-wrapper {
-	min-width: 800px;
 	max-width: 1280px;
 	background-color: #FFF;
 	margin: 0 auto;
 	box-shadow: 0 0 20px #aaa;
-	padding-bottom: 20px;
 }
 
 .links {
 	padding: 0 10px;
 	background-color: black;
+	height: 26px;
 }
 
 .links a {
@@ -105,7 +108,7 @@ i {
 
 nav {
 	padding: 0 10px;
-	background-color: #8ab92e;
+	background: #8ab92e linear-gradient(#8ab92e, #581);
 	color: white;
 }
 
@@ -131,41 +134,56 @@ nav a:hover {
 	font-size: 72px;
 	padding: 14px 30px;
 	background: #fff linear-gradient(#eee, #fff);
-	margin-bottom: 20px;
 }
 
 .content>section {
 	min-width: 400px;
-	margin: 0 20px;
-	max-width: 630px;
+	max-width: 590px;
 	display: inline-block;
+	margin-bottom: 30px;
+}
+
+.content>section.media {
+	margin-left: 30px;
 }
 
 .content>section.data {
 	border-radius: 10px 10px 0 0;
 	box-shadow: 2px 2px 6px #aaa;
+	margin-left: 30px;
+	border: #bbb 1px solid;
 }
 
 .content>section>header {
-	background: #8ab92e;
 	padding: 8px 16px;
 	font-size: 42px;
 	color: white;
 	border-radius: 10px 10px 0 0;
 }
 
+.data.total-health-pack header { background: #8ab92e linear-gradient(#8ab92e, #361); }
+.data.qore-system header { background: #555 linear-gradient(#555, #000); }
+.data.prime header { background: #EA394D linear-gradient(#EA394D, #9A0000); }
+.data.metaboliq header { background: #59D linear-gradient(#59D, #059); }
+
 .content>section.data-intro {
 	font-size: 16px;
 	font-style: italic;
 	font-weight: bold;
 	text-transform: uppercase;
-	padding: 8px 16px;
+	padding: 8px 26px;
 	max-width: 100%;
 	min-width: 800px;
-	margin: 20px 0;
 	display: block;
-	background-color: #eee;
+	background-color: #333;
 }
+
+.content>section.data-intro:first-child { margin-top: 0; }
+
+.content>section.data-intro.total-health-pack { color: #aad94e; }
+.content>section.data-intro.qore-system { color: #ccc }
+.content>section.data-intro.prime { color: #FF597D }
+.content>section.data-intro.metaboliq { color: #69BDFF }
 
 .content>section>header .subheader {
 	font-size: 22px;
@@ -175,29 +193,32 @@ nav a:hover {
 .content>section .summary {
 	font-size: 22px; 
 	padding: 6px 18px; 
-	background: #f3f3f3;
-	border: 1px solid #eee;
+	background: #eee linear-gradient(#eee, #ccc);
+	border: 1px solid #ddd;
+	border-right: 0;
+	border-left: 0;
 	color: black;
 }
 
 .content>section .description {
-	padding: 12px 18px 6px;
-	background: white;
-	border: 1px solid #eee;
-	border-top: 0;
-	border-bottom: 0;
-	color: #555;
+	padding: 12px 18px 12px;	
+	background: #f8f8f8 linear-gradient(#f8f8f8, #fff);
+	color: #333;
+}
+
+.short-padding-btm {
+	padding-bottom: 6px; 
 }
 
 .content>section .notes {
 	padding: 12px 18px 18px;	
-	border: 1px solid #eee;
+	background: #fff;
 	border-top: 0;
 	font-size: 14px;
 }
 
-.include { position: relative; }
+.include { position: relative; background: #f8f8f8 linear-gradient(#f8f8f8, #fff); }
 .include>div { padding: 0 12px 10px; }
 .include ul { padding: 0; }
 
-button.qthp { margin: 25px auto; display: block }
+footer { margin-top: 0px; background-color: black; padding: 16px 0; color: white; text-align: center; }
